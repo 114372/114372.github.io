@@ -1,133 +1,498 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<link rel="stylesheet" href="StyleSheet1.css">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<ul>
-  <li><a class="active" href="#LOGO">LOGO</a></li>
-  <li><a href="#SM@BISE">SM@BISE</a></li>
-  <li><a href="#HOME">HOME</a></li>
-  <li><a href="services.html">SERVICES</a></li>
-  <li><a href="#CONTACT US">CONTACT US</a></li>
-</ul>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  background-color:#C0C0C0 ;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color:#000000;
+  line-height: 1.8;
+}
 
-<img src="images/Clothing Company GoDaddy Store Image.png"alt="HTML5 Icon" width="1200" height="500">
-
-
-<p>Social media can have both positive and negative influences on teenagers' self-esteem and body image. Articles and surveys revealed that most teens compare themselves to filtered or edited content online—even when they know it’s not real. This can lead to feelings of insecurity or low confidence. However, some social media content promotes body positivity and support, which helps teens feel seen and accepted. Social media doesn’t always harm—it depends on how it's used.</p>
-
-<h1 style="text-align:center;">How does social media influence teenagers' self-esteem and perception of  body image?</h1>
-<p> Social media can negatively impact teenagers' self-esteem and body image by exposing them to unrealistic beauty standards and fostering constant comparisons. The curated, often digitally altered, images prevalent on platforms like Instagram and TikTok can create an unrealistic ideal that teens strive for, leading to feelings of inadequacy and dissatisfaction with their own appearance. </p>
-<h4>Here's a more detailed breakdown:</h4>
-
-
-
-<div class="row">
-  <div class="column" style="background-color:#aaa;"
-  border: 1px solid black;
-  height: 120px;
-  width: 150px;
-  background: url(\\fs1\Home$\Students\114372\Downloads\social-network-to-teens.png);
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;>
+  background-size: cover;
+}
 
-    <h2>1. Unrealistic Beauty  
-    Standards:</h2>
-    <p>Social media platforms are filled with images of seemingly perfect individuals, often showcasing an unattainable body type and lifestyle.
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image:url("\\fs1\Home$\Students\114372\Documents\Website\images\Clothing Company GoDaddy Store Image.png");
+  min-height: 100%;
+}
 
-These images, often heavily edited or filtered, contribute to the perception of a beauty ideal that is difficult, if not impossible, to achieve in reality.<span id="dots">...</span><span id="more">This constant exposure to unrealistic standards can deeply affect how teenagers perceive themselves. Many begin to question their own appearance, comparing themselves to influencers and peers who seem to have flawless skin, perfect bodies, and exciting lives. Over time, this can lead to a distorted self-image, where teens feel inadequate or unattractive simply because they don’t match what they see online. Even when they know these posts are edited or curated, the emotional impact remains strong. For some, this pressure fuels a cycle of editing their own photos or striving to change their appearance, not for self-satisfaction, but to meet the expectations of an online audience. In the long run, these habits can lower self-esteem and contribute to mental health struggles like anxiety, depression, or body dysmorphia.</span></p>
-<button onclick="myFunction()" id="myBtn">Read more</button>
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("\\fs1\Home$\Students\114372\Documents\Website\images\Clothing Company GoDaddy Store Image.png");
+  min-height: 400px;
+}
 
-<script>
-function myFunction() {
-  var dots = document.getElementById("dots");
-  var moreText = document.getElementById("more");
-  var btnText = document.getElementById("myBtn");
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("\\fs1\Home$\Students\114372\Documents\Website\images\Clothing Company GoDaddy Store Image.png");
+  min-height: 400px;
+}
 
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Read more";
-    moreText.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Read less";
-    moreText.style.display = "inline";
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
   }
 }
-</script>
+</style>
+</head>
+<body>
 
-
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#content" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i>CONTENT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
   </div>
-  <div class="column" style="background-color:#bbb;"
-  border: 1px solid black;
-  height: 120px;
-  width: 150px;
-  background: url(\\fs1\Home$\Students\114372\Downloads\social-network-to-teens.png);
-  background-repeat: no-repeat;
-  background-size: contain;>
-    <h2>2. Impact on Self-Esteem: </h2>
-    <p>The pressure to conform to social media beauty standards can lead to a decline in self-esteem, particularly for those who already struggle with body image issues.
 
-Negative comments, criticism, or even bullying related to appearance on social media can further exacerbate these feelings.</p>
-  </div>
-  <div class="column" style="background-color:#ccc;"
-  border: 1px solid black;
-  height: 120px;
-  width: 150px;
-  background: url(\\fs1\Home$\Students\114372\Downloads\social-network-to-teens.png);
-  background-repeat: no-repeat;
-  background-size: contain;>
-    <h2>3. Mental Health
-    Implications:</h2>
-    <p>Research suggests a correlation between social media use, body image concerns, and increased risk of eating disorders and depression.
-
-The constant comparison and pressure to maintain a certain image can contribute to anxiety, low self-esteem, and even body dysmorphia</p>
-
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#content" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTENT</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
   </div>
 </div>
 
-  <div class="layout-container">
-    <!-- Top Image -->
-    <div class="img-top">
-      <img src="..\images\ah-graphic1_page_07.jpg"alt="Top Image" />
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">IMPACT OF <span class="w3-hide-small">SOCIAL MEDIA</span> ON TEENAGERS</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT</h3>
+  <p class="w3-center"><em>Body Image & Self Respect</em></p>
+  <p>Social media can have both positive and negative influences on teenagers' self-esteem and body image. Articles and surveys revealed that most teens compare themselves to filtered or edited content online—even when they know it’s not real. This can lead to feelings of insecurity or low confidence. However, some social media content promotes body positivity and support, which helps teens feel seen and accepted. Social media doesn’t always harm—it depends on how it's used.</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right">SMBI&SE</i></b></p><br>
+      <img src="\\fs1\Home$\Students\114372\Documents\Website\images\images (4).jpeg" alt="Negative impact of body image and self esteem" width="500" height="333">
     </div>
 
-    <!-- Left Image -->
-    <div class="img-left">
-      <img src="img/left.jpg" alt="Left Image" />
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+    <h4> How does social media influence teenagers' self-esteem and perception of  body image?</h4>
+      <p>Social media can negatively impact teenagers' self-esteem and body image by exposing them to unrealistic beauty standards and fostering constant comparisons. The curated, often digitally altered, images prevalent on platforms like Instagram and TikTok can create an unrealistic ideal that teens strive for, leading to feelings of inadequacy and dissatisfaction with their own appearance. </p>
+    </div>
+  <div><p>Social media has a pervasive impact on body image in the United States, influencing one’s mental, physical, and social health. Body image issues encompass negative feelings and experiences related to one's physical appearance and are characterized by a preoccupation with perceived physical defects. This occurrence is especially common among youth. The harmful effects of constant exposure to idealized images, unrealistic beauty standards, and the influence of social media influencers are wide-ranging and severe. This brief focuses on the United States because of the competitive culture, the high cosmetic surgery rates, and leadership in social media use. Contributing factors such as comparative culture, social comparison theory, and the impact of influencers are all responsible for the spread of social media’s negative effects. Negative consequences include risky health behaviors, depression, anxiety, eating disorders, and the correlation with suicidal thoughts and attempts. The social impairments, such as interpersonal problems, low self-esteem, and bullying, are correlated to barriers to social connection. Interventions such as CBT therapy are being implemented to help the youth of America adapt to healthy habits of social media use and improve their self-image. By implementing professional therapy, there is hope that we can increase the benefits of addicting technology and minimize its harmful outcomes.</p></div>
+  </div>
+  <p class="w3-large w3-center w3-padding-16">Skilled in analysing social media’s impact on teens’ self-esteem.:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Body Image Concerns </p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:88%">88%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Compare Themselves to Others </p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:82%">82%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i> Report Lower Self-Esteem After Scrolling </p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:76%">76%</div>
+  </div>
+</div>
+<h4>Illusion of perfection</h4><p>Social media platforms are curated galleries of seemingly perfect lives. Filters, editing tools, and carefully chosen posts create an illusion of flawless beauty and unattainable lifestyles. This curated perfection often leads to unrealistic comparisons with our own lives, and detrimental self-evaluation.</p>
+<center><img src="\\fs1\Home$\Students\114372\Documents\Website\images\5f3c2f48d4466.webp"></center>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">CONTENT</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="content">
+  <h3 class="w3-center">Case Studies & Findings</h3>
+  <ol>
+  <li>Forty percent of teens reported that content on social media caused them to worry about their image.</li>
+<li>There exists a notable correlation between when kids receive their first phone (12–13) and the onset of Body Dysmorphic Disorder (also ages 12–13).</li>
+<li>As a result of excessive exposure to social media, teens who view themselves as very fat or very skinny are twice as likely to attempt or think about suicide than their “normal weight” peers.</li>
+<li>Over 7% of adolescents and young adults in the US were at risk for exercise addiction because of a high use of social media.</li>
+<li>Cognitive Behavioral Therapy (CBT) has been shown to greatly reduce the negative effects caused by social media and assist in the healthy incorporation of media in the lives of youth in the US.</li>
+<div>
+  <p class="w3-center"><em>Here are key visuals and examples from my research on social media’s impact on teenagers’ self-esteem and body image.<br> Click on the images to make them bigger</em></p><br>
+  </div>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="\\fs1\Home$\Students\114372\Downloads\images (4).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Comparrision of body image">
     </div>
 
-    <!-- Sign-Up Form -->
-    <div class="form-box">
-      <h2>Sign Up</h2>
-      <input type="email" placeholder="Email" />
-      <input type="text" placeholder="Username" />
-      <input type="password" placeholder="Password" />
+    <div class="w3-col m3">
+      <img src="\\fs1\Home$\Students\114372\Downloads\images (5).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The pressure of online trends">
     </div>
 
-    <!-- Right Image -->
-    <div class="img-right">
-      <img src="img/right.jpg" alt="Right Image" />
+    <div class="w3-col m3">
+      <img src="\\fs1\Home$\Students\114372\Downloads\images (2).jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Self-Esteem Issues">
     </div>
 
-    <!-- Bottom Image -->
-    <div class="img-bottom">
-      <img src="\\fs1\Home$\Students\114372\Downloads\images.jpeg"alt="Bottom Image" />
+    <div class="w3-col m3">
+      <img src="\\fs1\Home$\Students\114372\Downloads\social-network-to-teens.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="How filters shape beauty standards">
     </div>
   </div>
 
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+<h2><center>How social media can affect body image</center></h2>
+<h3>Positive Effects</h3>
+<h4>1. Body positive content and communities</h4>
+<ul>
+<li>Fortunately, there is a growing movement of body positivity on social media. Various communities and influencers such as Megan Jayne Crabbe and Sarah Nicole Landry are well-known on Instagram for promoting self-love and acceptance, encouraging their followers to embrace their unique bodies and appearances (Heger et al., 2022).</ul>
+<h4>2. Health and fitness inspiration</h4>
+<ul>Social media platforms serve as hubs for health and fitness inspiration. Users share their fitness journeys, workout routines, and healthy recipes, motivating others to adopt positive lifestyle changes while offering encouragement and support. These platforms can provide valuable advice for those who are seeking ways to work on their bodies in a healthy way.</ul>
+<h4>3. Support group</h4>
+<ul>Social media provides a platform for people facing body image issues to connect and support each other. Online support groups create a sense of community, reminding individuals that they are not alone in their struggles. These digital spaces serve as sanctuaries where people can openly discuss their concerns, fears, and triumphs related to body image.</ul>
+<center><img src="\\fs1\Home$\Students\114372\Documents\Website\images\images.png"></center>
+<h3>Negative Effects</h3>
+<h4>1. Constant comparison</h4>
+<ul>One of the most significant drawbacks of social media is the tendency to constantly compare ourselves with others, particularly among young women. Scrolling through feeds filled with seemingly perfect individuals can lead to feelings of inadequacy and low self-esteem. Research indicates that women frequently assess their own appearance through comparisons with others, and the more they engage in such comparisons, the more likely they are dissatisfied with their bodies. Apart from its influence on body dissatisfaction, exposure to Facebook may also have the potential to affect people’s moods. For instance, a study has found that exposure to Facebook led to a decline in mood in young women, likely attributable to their tendencies to compare themselves to others on the platform, who seemed to have happier or more fulfilled lives (Fardouly et al., 2015).</ul>
+<h4>2. Unrealistic beauty standards standards</h4>
+<ul>Social media often promotes unrealistic beauty standards, emphasising certain body types, skin tones, and features. Constant exposure to these ideals can distort one’s perception of their own body, leading to body dissatisfaction and even body dysmorphia (Pedersen, 2023). Studies have consistently linked the use of social networking sites to issues related to body image and disordered eating for both men and women (Fioravanti et al., 2022).</ul>
+<h4>3. Cyberbullying</h4>
+<ul>Cyberbullying refers to the act of using digital technologies to engage in bullying behaviour. This can occur on various online platforms such as social media, messaging apps, gaming sites, and mobile devices. It involves repetitive actions intended to intimidate, provoke anger, or embarrass the individuals being targeted (UNICEF, n.d).The increasing popularity of, and anonymity provided by social media platforms appear to be increasingly prominent in perpetrating sometimes leads to cyberbullying, and spaces where people become victims of cyberbullying (Whittaker & Kowalski, 2015). This is in part because of the substantial amount of personal data shared online, and interactions between users (Alim, 2016). According to a study by Ditch the Label (2013), it was reported that 21% of teenagers in the US encountered frequent incidents of cyberbullying. Negative comments, body-shaming, and online harassment can severely impact an individual’s self-esteem and body image. Cyberbullying can lead to serious emotional distress, anxiety, and even depression in the victims (Kolonko, 2022). Interpersonal relationships can also be adversely impacted, including those with family, friends, and romantic partners (Hamm et al., 2015).</ul>
+<center><img src=data:image/jpeg;base64,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></center>
+<div>
+<h2><center>How to foster a healthy relationship with social media</center></h2>
+<h4>1. Spending quality time with loved ones.</h4>
+<ul>Spending quality time with loved ones is essential to fostering a healthy relationship with social media. By dedicating time to connect with the people who matter most, we can not only strengthen our personal relationships but also create a natural balance in our lives.</ul>
+<h4>2. Curate your social media feed for greater positivity</h4>
+<ul>Unfollow accounts that trigger negative emotions or promote unrealistic beauty standards. Instead, follow accounts that promote body positivity, mental health, and self-care.</ul>
+<h4>3. Practice self-compassion</h4>
+<ul>Be kind and gentle with yourself. Remember that nobody is perfect, and imperfections are what make us unique and beautiful. Practising self-compassion exercises helps to enhance your self-esteem.
 
-<footer>
-  <h3>Author:</h3>
-  <p>XYZ Example</p>
-  <h3>Contact information:</h3>
-  <p>Mail Address: <a href="mailto:xyz@example.com">xyz@example.com</a></p>
-  <p>Postal Address: <i>123, Street 1, Colony 2, City, State, Country, 123123</i></p>
-  <p>Tel. No. <i>123456</i></p>
+For example, try writing letters to yourself as you would to your closest friend. Acknowledge your struggles, mistakes and imperfections. Then, write a compassionate response to yourself, emphasising understanding, forgiveness, and self-love. You can also create positive affirmations that emphasise self-compassion and repeat them to yourself regularly. For example, “I am worthy of love and kindness. I accept myself as I am. I am enough.”</ul>
+<h4>4. Seek professional help</h4>
+<ul>If your self-esteem and body image issues become overwhelming, consider seeking counselling for adults in Singapore. Trained professionals can provide personalised guidance and support to help you navigate these challenges, develop healthier self-perception, and build a stronger sense of well-being.</ul>
+<h3>Conclusion</h3><ul>While social media undeniably affects our self-esteem and body image, it is crucial to recognise its impact and actively work towards a healthier relationship with these platforms. By fostering self-compassion, curating our digital environment, and seeking support when needed, such as through individual or couple therapy, we can navigate the digital landscape with confidence and resilience. Remember, your worth is not determined by the likes or comments on your social media posts - true self-love comes from within.</ul>
+<center><img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVMX2lIwGIYpmwq0wGZe_kGTrdGnRqJXV3z1GAJQ8MijeZDZWIb42hgr9frDJnzvHqfo8&usqp=CAU></center>
+
+
+
+
+
+
+<!--Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+  <p class="w3-center"><em>I'd love your feedback!</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Chicago, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mail@mail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<div>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #A9A9A9;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color:#9370DB ;
+}
+</style>
+<div>
+<h2><center>Contact Information</center></h2></div>
+<div>
+<h3>Email us at smbise@gmail.com </h3></div>
+<div></div>
+<div>
+<h4>Meet our dedicated team of student changemakers skilled in researching, writing, and communicating about social issues.</h4>
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<body>
+<h2>Modal Signup Form</h2>
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+     
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<div>
+<img src="\\fs1\Home$\Students\114372\Documents\Website\images\images (1).jpeg" width="1200" height="500"></div>
+</body>
+<center><h2>THANK YOU</h2><center>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 
 </body>
 </html>
